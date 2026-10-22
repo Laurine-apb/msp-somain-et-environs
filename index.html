@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSP Somain et environs</title>
+<meta name="description" content="Maison de santé pluriprofessionnelle de Somain : 32 professionnels de santé libéraux, coordonnés sur Somain, Wandignies-Hamage, Fenain et Rieulay.">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#2E8C57">
+<meta property="og:title" content="MSP Somain et environs">
+<meta property="og:description" content="Maison de santé pluriprofessionnelle de Somain : 32 professionnels de santé libéraux, coordonnés sur Somain, Wandignies-Hamage, Fenain et Rieulay.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --fond:#f4f8f4;
+  --fond-alt:#e9f1eb;
+  --surface:#fff;
+  --surface-2:#f7faf7;
+  --trait:#d6e3da;
+  --trait-fort:#b9cdc1;
+  --encre:#16272b;
+  --encre-2:#4d6169;
+  --encre-3:#6e8189;
+  --vert:#2e8c57;
+  --vert-fonce:#216b41;
+  --vert-voile:#e2f1e7;
+  --bleu:#4569c4;
+  --bleu-fonce:#33509b;
+  --bleu-voile:#e4eaf9;
+  --ombre-douce:0 1px 2px rgba(22,39,43,.05),0 6px 20px -8px rgba(22,39,43,.14);
+  --ombre-forte:0 2px 4px rgba(22,39,43,.06),0 18px 40px -18px rgba(22,39,43,.30);
+  --rail:1120px;
+  --r-s:8px;
+  --r-m:14px;
+  --r-l:22px;
+  --serif:"Literata","Georgia","Times New Roman",serif;
+  --sans:"Source Sans 3","Segoe UI","Arial",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  margin:0;
+  background:var(--fond);
+  color:var(--encre);
+  font:400 1.0625rem/1.65 var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--bleu-fonce)}
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:600;
+  line-height:1.18;
+  letter-spacing:-.008em;
+  margin:0;
+  text-wrap:balance;
+}
+h1{font-size:clamp(2.1rem,1.4rem + 3vw,3.4rem)}
+h2{font-size:clamp(1.6rem,1.2rem + 1.7vw,2.3rem)}
+h3{font-size:1.15rem;font-family:var(--sans);font-weight:700;letter-spacing:0}
+p{margin:0}
+.rail{width:100%;max-width:var(--rail);margin-inline:auto;padding-inline:clamp(1.15rem,4vw,2.5rem)}
+.lisible{max-width:62ch}
+.evite{position:absolute;left:-9999px;top:0;background:var(--vert);color:#fff;padding:.8rem 1.2rem;z-index:100;border-radius:0 0 var(--r-s) 0}
+.evite:focus{left:0}
+.eyebrow{
+  font-size:.78rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--vert);
+  margin:0 0 .55rem;display:flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--vert);border-radius:2px;flex:none}
+section > .rail{padding-block:clamp(3.2rem,7vw,5.5rem)}
+.bande-alt{background:var(--fond-alt)}
+.tete-section{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2.4rem}
+.tete-section p{color:var(--encre-2);max-width:60ch}
+.site-tete{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--fond) 88%, transparent);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--trait);
+}
+.site-tete .rail{
+  display:flex;align-items:center;gap:1rem;min-height:74px;padding-block:.55rem;
+}
+.marque{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit;margin-right:auto}
+.marque img{width:40px}
+.marque b{font-family:var(--serif);font-size:1.02rem;font-weight:600;display:block;line-height:1.2}
+.marque .sous{font-size:.72rem;color:var(--encre-3);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+@media (max-width:1180px){.marque .sous{display:none}}
+.nav-liens{display:flex;align-items:center;gap:.2rem}
+.nav-liens a{
+  color:var(--encre-2);text-decoration:none;font-size:.95rem;font-weight:600;padding:.5rem .62rem;border-radius:var(--r-s);white-space:nowrap;
+}
+.nav-liens a:hover{color:var(--encre);background:var(--vert-voile)}
+.burger{
+  display:none;background:var(--surface);border:1px solid var(--trait-fort);color:var(--encre);
+  border-radius:var(--r-s);padding:.55rem .8rem;font:600 .95rem var(--sans);cursor:pointer;align-items:center;gap:.5rem;
+}
+.burger svg{display:block}
+@media (max-width:940px){
+  .burger{display:inline-flex}
+  .nav-liens{
+    display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    background:var(--surface);border-bottom:1px solid var(--trait);box-shadow:var(--ombre-forte);
+    padding:.5rem clamp(1.15rem,4vw,2.5rem) 1rem;
+  }
+  .nav-liens.ouvert{display:flex}
+  .nav-liens a{padding:.85rem .4rem;font-size:1.05rem;border-bottom:1px solid var(--trait)}
+  .nav-liens a:last-child{border-bottom:0}
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.92rem 1.5rem;border-radius:999px;
+  font:700 1.02rem var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:transform .16s ease, box-shadow .16s ease, background-color .16s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-vert{background:var(--vert);color:#fff;box-shadow:0 8px 20px -10px var(--vert)}
+.btn-vert:hover{background:var(--vert-fonce)}
+.btn-ligne{background:var(--surface);color:var(--encre);border-color:var(--trait-fort)}
+.btn-ligne:hover{border-color:var(--vert);color:var(--vert-fonce)}
+.heros{position:relative;overflow:hidden}
+.heros::before{
+  content:"";position:absolute;inset:-40% 45% auto -25%;height:120%;
+  background:radial-gradient(45% 45% at 30% 30%, color-mix(in srgb, var(--vert) 22%, transparent), transparent 70%),
+             radial-gradient(45% 45% at 75% 55%, color-mix(in srgb, var(--bleu) 20%, transparent), transparent 70%);
+  filter:blur(10px);pointer-events:none;
+}
+.heros > .rail{position:relative;display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media (min-width: 880px){.heros > .rail{grid-template-columns:1.15fr .85fr}}
+.heros h1 span{color:var(--vert);display:block}
+.heros .accroche{margin-top:1.1rem;font-size:1.16rem;color:var(--encre-2);max-width:46ch}
+.heros .actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.9rem}
+.heros-logo{
+  justify-self:center;background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-l);
+  padding:clamp(1.6rem,4vw,2.6rem);box-shadow:var(--ombre-forte);max-width:340px;
+}
+.heros-logo .logo-box{
+  width:100%;aspect-ratio:1;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,#edf8f0,#eaf0ff);border:1px solid var(--trait);
+}
+.logo-box svg{width:80%;height:auto}
+.heros-logo .logo-box{background:#fff;border:none}
+.logo-box img{width:86%;height:auto;display:block}
+.evenement .affiche .poster-img{width:100%;max-width:320px;height:auto;display:block;border-radius:12px;box-shadow:var(--ombre-douce)}
+.pratique{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.carte-pratique{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:1.35rem 1.4rem;box-shadow:var(--ombre-douce);
+  display:flex;gap:.95rem;align-items:flex-start;
+}
+.carte-pratique .pastille{
+  flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:var(--vert-voile);color:var(--vert);
+}
+.carte-pratique.bleue .pastille{background:var(--bleu-voile);color:var(--bleu)}
+.carte-pratique h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;color:var(--encre-3);margin-bottom:.3rem}
+.carte-pratique p{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-pratique a{color:var(--encre);text-decoration-color:var(--vert);text-underline-offset:3px}
+.chiffres{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:2.2rem}
+.chiffre{
+  background:var(--surface);border:1px solid var(--trait);border-left:4px solid var(--vert);border-radius:var(--r-s);
+  padding:1.1rem 1.25rem;
+}
+.chiffre:nth-child(even){border-left-color:var(--bleu)}
+.chiffre b{display:block;font-family:var(--serif);font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.chiffre span{font-size:.93rem;color:var(--encre-2)}
+.axes{list-style:none;padding:0;margin:2.2rem 0 0;display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.axe{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:1.2rem 1.3rem;display:flex;gap:.8rem;align-items:flex-start;
+}
+.axe svg{flex:none;margin-top:.15rem;color:var(--vert)}
+.axe b{font-size:1rem}
+.filtres{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.filtre{
+  background:var(--surface);border:1px solid var(--trait-fort);color:var(--encre-2);border-radius:999px;padding:.5rem 1rem;
+  font:600 .93rem var(--sans);cursor:pointer;
+}
+.filtre:hover{border-color:var(--vert);color:var(--encre)}
+.filtre[aria-pressed="true"]{background:var(--vert);border-color:var(--vert);color:#fff}
+.recherche{position:relative;margin-bottom:1rem;max-width:420px}
+.recherche input{
+  width:100%;font:inherit;font-size:1rem;color:var(--encre);background:var(--surface);
+  border:1px solid var(--trait-fort);border-radius:999px;padding:.7rem 1rem .7rem 2.6rem;
+}
+.recherche svg{position:absolute;left:.95rem;top:50%;transform:translateY(-50%);color:var(--encre-3);pointer-events:none}
+.equipe{display:grid;gap:.85rem;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));list-style:none;padding:0;margin:0}
+.praticien{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:1.05rem 1.15rem 1.1rem;
+  display:flex;flex-direction:column;gap:.8rem;
+}
+.praticien.masque{display:none}
+.pr-tete{display:flex;align-items:center;gap:.85rem}
+.pr-tete .mono{
+  flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  font:700 .95rem var(--sans);letter-spacing:.02em;background:var(--vert-voile);color:var(--vert-fonce);
+}
+.praticien[data-fam="b"] .pr-tete .mono{background:var(--bleu-voile);color:var(--bleu-fonce)}
+.pr-nom{display:block;font-size:1.04rem;font-weight:700;line-height:1.3}
+.pr-prof{display:block;font-size:.9rem;color:var(--encre-2)}
+.pr-note{display:block;font-size:.8rem;color:var(--encre-3);font-style:italic}
+.pr-coords{display:flex;flex-direction:column;gap:.35rem;border-top:1px solid var(--trait);padding-top:.75rem;margin-top:auto}
+.pr-coords > *{display:flex;gap:.5rem;align-items:flex-start;font-size:.92rem;color:var(--encre-2)}
+.pr-coords svg{flex:none;margin-top:.2rem;color:var(--encre-3)}
+.pr-coords a{color:var(--encre);font-weight:700;text-decoration:none;font-variant-numeric:tabular-nums}
+.pr-coords a:hover{text-decoration:underline;text-decoration-color:var(--vert);text-underline-offset:3px}
+.pr-coords a svg{color:var(--vert)}
+.note-equipe{margin-top:1.6rem;font-size:.95rem;color:var(--encre-2)}
+.vide{margin-top:1.5rem;font-size:1rem;color:var(--encre-2)}
+.services{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.service{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:1.4rem;
+  display:flex;flex-direction:column;gap:.5rem;
+}
+.service .puce{width:10px;height:10px;border-radius:50%;background:var(--vert)}
+.service.b .puce{background:var(--bleu)}
+.service p{color:var(--encre-2);font-size:.98rem}
+.service .nb{margin-top:auto;padding-top:.7rem;font-size:.86rem;font-weight:700;color:var(--encre-3);letter-spacing:.04em;text-transform:uppercase}
+.sous-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.4rem}
+.sous-nav a{
+  background:var(--surface);border:1px solid var(--trait-fort);color:var(--encre-2);border-radius:999px;padding:.5rem 1.05rem;
+  font-size:.93rem;font-weight:600;text-decoration:none;
+}
+.sous-nav a:hover{border-color:var(--vert);color:var(--encre)}
+.evenements{display:grid;gap:1.4rem}
+@media (min-width:900px){.evenements{grid-template-columns:1fr 1fr}}
+.evenement{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--ombre-douce);
+  display:flex;flex-direction:column;
+}
+.evenement .affiche{background:linear-gradient(135deg,#edf8f0,#ecf1ff);min-height:220px;display:flex;align-items:center;justify-content:center;padding:1rem}
+.evenement .affiche .poster{
+  width:100%;max-width:320px;height:200px;border-radius:18px;border:1px solid var(--trait);position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#dfefff,#effaf1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.5);
+}
+.evenement .poster::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%, rgba(46,140,87,.22), transparent 32%),radial-gradient(circle at 80% 62%, rgba(69,105,196,.18), transparent 36%)}
+.evenement .poster .p-titre{
+  position:absolute;left:1.1rem;right:1.1rem;top:1rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#21422f;font-size:.8rem
+}
+.evenement .poster .p-body{
+  position:absolute;left:1.1rem;right:1.1rem;bottom:1.1rem;font-family:var(--serif);font-weight:600;font-size:1.7rem;line-height:1.08;color:#1a2c2d
+}
+.evenement.recurrent .poster{background:linear-gradient(135deg,#eef4ff,#f3f7ff)}
+.evenement .corps{padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.evenement .quand{
+  align-self:flex-start;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border-radius:4px;padding:.2rem .5rem;
+  background:var(--vert-voile);color:var(--vert-fonce);
+}
+.evenement.recurrent .quand{background:var(--bleu-voile);color:var(--bleu-fonce)}
+.evenement h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;letter-spacing:-.005em}
+.evenement .detail{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.45rem}
+.evenement .detail li{display:flex;gap:.6rem;align-items:flex-start;font-size:.97rem}
+.evenement .detail svg{flex:none;margin-top:.22rem;color:var(--vert)}
+.evenement .par{font-size:.9rem;color:var(--encre-3);font-style:italic}
+@media (min-width:620px){
+  .evenement{flex-direction:row;align-items:flex-start}
+  .evenement .affiche{flex:0 0 40%;align-self:stretch;display:flex;align-items:flex-start;padding:1rem}
+  .evenement .poster{max-width:none;width:100%}
+  .evenement .corps{flex:1 1 auto}
+}
+.duo{display:grid;gap:1.6rem;align-items:start}
+@media (min-width:860px){.duo{grid-template-columns:1fr 1fr;gap:2.4rem}}
+.bloc{
+  background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:clamp(1.3rem,3vw,1.9rem);box-shadow:var(--ombre-douce);
+}
+.bloc h3{margin-bottom:1rem}
+.infos-acces{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.85rem}
+.infos-acces li{display:flex;gap:.8rem;align-items:flex-start;font-size:1rem}
+.infos-acces svg{flex:none;margin-top:.22rem;color:var(--vert)}
+.campagnes{display:grid;gap:.85rem;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));list-style:none;padding:0;margin:0}
+.campagne{
+  background:var(--surface);border:1px solid var(--trait);border-top:3px solid var(--vert);border-radius:var(--r-s);padding:1.1rem 1.2rem;
+}
+.campagne:nth-child(3n+2){border-top-color:var(--bleu)}
+.campagne b{display:block;font-size:1.02rem}
+.campagne span{display:block;font-size:.93rem;color:var(--encre-2);margin-top:.3rem}
+.campagne .avec{
+  display:inline-block;margin-top:.6rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--encre-3);
+}
+.themes{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:1.2rem 0 0}
+.themes li{
+  background:var(--surface);border:1px solid var(--trait);border-radius:999px;padding:.35rem .85rem;font-size:.88rem;color:var(--encre-2)
+}
+.liste-rdv{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem}
+.liste-rdv li{display:flex;gap:.85rem;align-items:flex-start}
+.liste-rdv .num{
+  flex:none;width:30px;height:30px;border-radius:50%;background:var(--bleu-voile);color:var(--bleu-fonce);display:grid;place-items:center;font:700 .9rem var(--sans);
+}
+.liste-rdv b{display:block}
+.liste-rdv p{font-size:.95rem;color:var(--encre-2)}
+.alerte{
+  margin-top:1.5rem;background:var(--bleu-voile);border:1px solid color-mix(in srgb, var(--bleu) 35%, transparent);border-radius:var(--r-m);
+  padding:1.1rem 1.25rem;font-size:.98rem;
+}
+.alerte b{color:var(--bleu-fonce)}
+.tableau-wrap{overflow-x:auto}
+table.horaires{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+table.horaires th,table.horaires td{text-align:left;padding:.68rem .4rem;border-bottom:1px solid var(--trait);font-size:1rem}
+table.horaires th{font-weight:700;width:42%}
+table.horaires tr:last-child th,table.horaires tr:last-child td{border-bottom:0}
+.commune-titre{
+  font-family:var(--sans);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.11em;color:var(--encre-3);
+  margin:2.2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--trait);
+}
+.commune-titre:first-of-type{margin-top:0}
+.cabinets{list-style:none;padding:0;margin:0;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(310px,1fr))}
+.cabinet{
+  background:var(--surface);border:1px solid var(--trait);border-left:4px solid var(--bleu);border-radius:var(--r-s);padding:1.05rem 1.15rem;
+}
+.cabinet.siege{border-left-color:var(--vert)}
+.cabinet .adr{display:block;font-weight:700;font-size:1.02rem;line-height:1.35}
+.cabinet .qui{display:block;font-size:.92rem;color:var(--encre-2);margin-top:.3rem}
+.cabinet .tel{display:inline-block;margin-top:.55rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--encre);text-decoration:none}
+.cabinet .tel:hover{text-decoration:underline;text-decoration-color:var(--vert);text-underline-offset:3px}
+.cabinet .etiq{
+  display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--vert-fonce);
+  background:var(--vert-voile);border-radius:4px;padding:.15rem .45rem;margin-bottom:.45rem;
+}
+.champ{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.05rem}
+.champ label{font-weight:700;font-size:.95rem}
+.champ input,.champ textarea{
+  font:inherit;font-size:1rem;color:var(--encre);background:var(--surface-2);border:1px solid var(--trait-fort);border-radius:var(--r-s);
+  padding:.75rem .85rem;width:100%;
+}
+.champ textarea{min-height:130px;resize:vertical}
+.champ input:focus,.champ textarea:focus{border-color:var(--vert)}
+.mention-form{font-size:.88rem;color:var(--encre-3);margin-top:.9rem}
+.coord{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.2rem}
+.coord a{color:var(--encre);font-size:1.12rem;font-weight:700;text-decoration-color:var(--vert);text-underline-offset:4px}
+.coord small{display:block;font-size:.84rem;text-transform:uppercase;letter-spacing:.09em;color:var(--encre-3);font-weight:700;margin-bottom:.15rem}
+.site-pied{
+  background:var(--fond-alt);border-top:1px solid var(--trait);color:var(--encre-2);font-size:.95rem;
+}
+.site-pied .rail{padding-block:2.8rem 2rem;display:grid;gap:2rem}
+@media (min-width:780px){.site-pied .rail{grid-template-columns:1.4fr 1fr 1fr}}
+.site-pied h3{font-size:.84rem;text-transform:uppercase;letter-spacing:.1em;color:var(--encre);margin-bottom:.8rem}
+.site-pied ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.site-pied a{color:var(--encre-2);text-decoration:none}
+.site-pied a:hover{color:var(--vert);text-decoration:underline}
+.site-pied .marque-pied{display:flex;gap:.8rem;align-items:flex-start}
+.site-pied .marque-pied img{width:46px}
+.bas-pied{
+  border-top:1px solid var(--trait);font-size:.87rem;color:var(--encre-3);
+}
+.bas-pied .rail{padding-block:1.1rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;justify-content:space-between}
+.legal{font-size:.95rem;color:var(--encre-2)}
+.legal h3{margin:1.8rem 0 .6rem;font-size:1.02rem;color:var(--encre)}
+.legal h3:first-of-type{margin-top:0}
+.legal p{margin-bottom:.7rem;max-width:72ch}
+.legal ul{margin:0 0 .7rem;padding-left:1.3rem;max-width:72ch}
+.legal li{margin-bottom:.35rem}
+.legal dl{margin:0 0 .7rem;display:grid;gap:.3rem .9rem;grid-template-columns:max-content 1fr;max-width:72ch}
+.legal dt{font-weight:700;color:var(--encre)}
+.legal dd{margin:0}
+@media (max-width:560px){.legal dl{grid-template-columns:1fr}.legal dd{margin-bottom:.5rem}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<a class="evite" href="#contenu">Aller au contenu principal</a>
+
+<header class="site-tete">
+  <div class="rail">
+    <a class="marque" href="#accueil">
+      <img src="logo.png" alt="" width="40" height="48" style="height:48px;width:auto">
+      <span>
+        <b>MSP Somain et environs</b>
+        <span class="sous">Maison de santé pluriprofessionnelle</span>
+      </span>
+    </a>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-liens">
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      Menu
+    </button>
+
+    <nav class="nav-liens" id="nav-liens" aria-label="Navigation principale">
+      <a href="#presentation">La maison de santé</a>
+      <a href="#equipe">Nos praticiens</a>
+      <a href="#services">Nos services</a>
+      <a href="#actualites">Actualités</a>
+      <a href="#rendez-vous">Rendez-vous</a>
+      <a href="#cabinets">Nos cabinets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <section class="heros" id="accueil">
+    <div class="rail">
+      <div>
+        <p class="eyebrow">Somain · Wandignies-Hamage · Fenain · Rieulay</p>
+        <h1>Des soignants près de chez vous,<span>qui travaillent ensemble.</span></h1>
+        <p class="accroche">32 professionnels de santé libéraux du territoire, chacun dans son cabinet, réunis autour d’un même projet de santé : vous écouter, vous accompagner et coordonner votre parcours de soins.</p>
+        <div class="actions">
+          <a class="btn btn-vert" href="#rendez-vous">Prendre rendez-vous</a>
+          <a class="btn btn-ligne" href="#equipe">Trouver un praticien</a>
+        </div>
+      </div>
+      <div class="heros-logo">
+        <div class="logo-box">
+          <img src="logo.png" alt="Logo MSP Somain et environs" width="560" height="665">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Informations pratiques" class="bande-alt">
+    <div class="rail" style="padding-block: clamp(2rem, 4vw, 2.8rem);">
+      <div class="pratique">
+        <div class="carte-pratique">
+          <span class="pastille" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.7"/><circle cx="10" cy="8.4" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg>
+          </span>
+          <div>
+            <h3>Siège de la MSP</h3>
+            <p>40 bis rue Pasteur<br>59490 Somain</p>
+          </div>
+        </div>
+
+        <div class="carte-pratique bleue">
+          <span class="pastille" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Téléphone</h3>
+            <p><a href="tel:+33772147325" style="white-space:nowrap;">07 72 14 73 25</a></p>
+          </div>
+        </div>
+
+        <div class="carte-pratique">
+          <span class="pastille" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3.4" y="4.4" width="13.2" height="12.2" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3.4 8.2h13.2M7 2.8v3M13 2.8v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="m7.8 12.4 1.5 1.5 2.9-3.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Rendez-vous en ligne</h3>
+            <p><a href="https://www.doctolib.fr/maison-de-sante/somain/maison-de-sante-pluridisciplinaire-somain" target="_blank" rel="noopener">Réserver sur Doctolib</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="presentation">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">La maison de santé</p>
+        <h2>Des professionnels libéraux qui travaillent ensemble, tout en gardant leurs cabinets</h2>
+        <p>Une coordination renforcée au service de la prise en charge.</p>
+      </div>
+
+      <div class="lisible" style="display:flex; flex-direction:column; gap:1.1rem; color:var(--encre-2);">
+        <p>La MSP Somain et environs n’est pas un établissement unique : c’est un réseau de professionnels de santé libéraux. Trente-deux praticiens du territoire — médecins généralistes, infirmiers, kinésithérapeutes, pharmaciens, sages-femmes et spécialistes — continuent d’exercer dans leur cabinet respectif, tout en travaillant ensemble autour d’un projet de santé commun.</p>
+        <p>Concrètement, cela permet une meilleure coordination des parcours de soins : votre médecin, votre infirmier et votre kinésithérapeute peuvent échanger sur votre suivi et organiser les rendez-vous de manière plus fluide. Vous conservez votre praticien habituel, près de chez vous, tout en bénéficiant d’un accompagnement plus cohérent.</p>
+      </div>
+
+      <div class="chiffres">
+        <div class="chiffre"><b>32</b><span>professionnels de santé</span></div>
+        <div class="chiffre"><b>11</b><span>professions représentées</span></div>
+        <div class="chiffre"><b>17</b><span>cabinets dans le somainois</span></div>
+        <div class="chiffre"><b>4</b><span>communes desservies</span></div>
+      </div>
+
+      <h3 style="margin-top:3rem; font-family:var(--serif); font-size:1.35rem; font-weight:600;">Notre projet de santé</h3>
+      <ul class="axes">
+        <li class="axe">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h4l1.6-4 2.6 8 1.8-4H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><b>Faciliter l'accès aux soins</b></span>
+        </li>
+        <li class="axe">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="7" cy="6.6" r="2.6" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="8.4" r="2.2" stroke="currentColor" stroke-width="1.8"/><path d="M2.4 16.4c0-2.5 2.1-4.2 4.6-4.2s4.6 1.7 4.6 4.2M13 12.6c2.2.2 4 1.7 4 3.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span><b>Favoriser une prise en charge pluriprofessionnelle</b></span>
+        </li>
+        <li class="axe">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.6 3.6 6v5c0 4 2.7 6.4 6.4 7.4 3.7-1 6.4-3.4 6.4-7.4V6L10 2.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 7.4v5M7.5 9.9h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span><b>Renforcer les actions de prévention</b></span>
+        </li>
+        <li class="axe">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16.8s-6.2-3.6-6.2-8A3.6 3.6 0 0 1 10 6.3a3.6 3.6 0 0 1 6.2 2.5c0 4.4-6.2 8-6.2 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span><b>Pérenniser notre comité usagers</b></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="equipe" class="bande-alt">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Nos praticiens</p>
+        <h2>Trouver un professionnel de santé</h2>
+        <p>Cherchez par nom, par profession ou par rue, ou filtrez par spécialité.</p>
+      </div>
+
+      <div class="recherche">
+        <svg width="17" height="17" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="7.8" cy="7.8" r="5.4" stroke="currentColor" stroke-width="1.8"/><path d="m11.8 11.8 3.8 3.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <label class="evite" for="rech">Rechercher un praticien</label>
+        <input type="search" id="rech" placeholder="Rechercher : Pasteur, kiné, Dupont…" autocomplete="off">
+      </div>
+
+      <div class="filtres" role="group" aria-label="Filtrer les praticiens par profession">
+        <button class="filtre" data-cat="tous" aria-pressed="true">Tous <span aria-hidden="true">(32)</span></button>
+        <button class="filtre" data-cat="medecin" aria-pressed="false">Médecins généralistes <span aria-hidden="true">(4)</span></button>
+        <button class="filtre" data-cat="ipa" aria-pressed="false">Infirmier en pratique avancée</button>
+        <button class="filtre" data-cat="infirmier" aria-pressed="false">Infirmiers libéraux <span aria-hidden="true">(9)</span></button>
+        <button class="filtre" data-cat="kine" aria-pressed="false">Masseurs-kinésithérapeutes <span aria-hidden="true">(5)</span></button>
+        <button class="filtre" data-cat="pharmacien" aria-pressed="false">Pharmaciens d&#x27;officine <span aria-hidden="true">(4)</span></button>
+        <button class="filtre" data-cat="sagefemme" aria-pressed="false">Sages-femmes <span aria-hidden="true">(3)</span></button>
+        <button class="filtre" data-cat="orthophoniste" aria-pressed="false">Orthophoniste</button>
+        <button class="filtre" data-cat="dieteticienne" aria-pressed="false">Diététiciennes <span aria-hidden="true">(2)</span></button>
+        <button class="filtre" data-cat="apa" aria-pressed="false">Activité physique adaptée</button>
+        <button class="filtre" data-cat="podologue" aria-pressed="false">Pédicure-podologue</button>
+        <button class="filtre" data-cat="osteopathe" aria-pressed="false">Ostéopathe</button>
+      </div>
+
+      <ul class="equipe" id="liste-equipe">
+        <li class="praticien" data-cat="medecin" data-fam="v" data-rech="dr julianne chatelain kong medecin generaliste medecins generalistes wandignies-hamage 30 rue robert planchon">
+          <div class="pr-tete"><span class="mono">JC</span><span><span class="pr-nom">Dr Julianne Chatelain Kong</span><span class="pr-prof">Médecin généraliste</span></span></div>
+          <div class="pr-coords">
+            <span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>30 rue Robert Planchon, Wandignies-Hamage</span></span>
+            <a href="tel:+33374014145"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 74 01 41 45</a>
+          </div>
+        </li>
+
+        <li class="praticien" data-cat="medecin" data-fam="v" data-rech="dr perrine langagne medecin generaliste medecins generalistes somain 23 rue anatole france">
+          <div class="pr-tete"><span class="mono">PL</span><span><span class="pr-nom">Dr Perrine Langagne</span><span class="pr-prof">Médecin généraliste</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>23 rue Anatole France, Somain</span></span><a href="tel:+33327906033"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 60 33</a></div>
+        </li>
+
+        <li class="praticien" data-cat="medecin" data-fam="v" data-rech="dr salim maltese medecin generaliste medecins generalistes somain 23 rue anatole france">
+          <div class="pr-tete"><span class="mono">SM</span><span><span class="pr-nom">Dr Salim Maltese</span><span class="pr-prof">Médecin généraliste</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>23 rue Anatole France, Somain</span></span><a href="tel:+33327906033"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 60 33</a></div>
+        </li>
+
+        <li class="praticien" data-cat="medecin" data-fam="v" data-rech="dr olivier petitpre medecin generaliste medecins generalistes somain 40 bis rue pasteur">
+          <div class="pr-tete"><span class="mono">OP</span><span><span class="pr-nom">Dr Olivier Petitpré</span><span class="pr-prof">Médecin généraliste</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>40 bis rue Pasteur, Somain</span></span><a href="tel:+33327906033"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 60 33</a></div>
+        </li>
+
+        <li class="praticien" data-cat="ipa" data-fam="v" data-rech="julien marchese infirmier en pratique avancee ipa somain 23 rue anatole france doctolib">
+          <div class="pr-tete"><span class="mono">JM</span><span><span class="pr-nom">Julien Marchese</span><span class="pr-prof">Infirmier en pratique avancée</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>23 rue Anatole France, Somain</span></span><a href="https://www.doctolib.fr/maison-de-sante/somain/maison-de-sante-pluridisciplinaire-somain" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.4" y="4.4" width="13.2" height="12.2" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.4 8.2h13.2M7 2.8v3M13 2.8v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Rendez-vous sur Doctolib</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="isabelle barrao infirmiere somain 29 rue alexandre bisiaux">
+          <div class="pr-tete"><span class="mono">IB</span><span><span class="pr-nom">Isabelle Barrao</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>29 rue Alexandre Bisiaux, Somain</span></span><a href="tel:+33327973778"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 97 37 78</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="leila betremieux infirmiere somain 5a rue jean-baptiste durieux">
+          <div class="pr-tete"><span class="mono">LB</span><span><span class="pr-nom">Leïla Betremieux</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>5A rue Jean-Baptiste Durieux, Somain</span></span><a href="tel:+33699182865"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 99 18 28 65</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="aurore canivez infirmiere somain 168 rue edmond simon">
+          <div class="pr-tete"><span class="mono">AC</span><span><span class="pr-nom">Aurore Canivez</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>168 rue Edmond Simon, Somain</span></span><a href="tel:+33327997470"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 99 74 70</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="franck delannoy infirmier somain 6 rue alexandre bisiaux">
+          <div class="pr-tete"><span class="mono">FD</span><span><span class="pr-nom">Franck Delannoy</span><span class="pr-prof">Infirmier</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>6 rue Alexandre Bisiaux, Somain</span></span><a href="tel:+33327862478"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 86 24 78</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="ophelie destombes infirmiere somain 6 rue alexandre bisiaux">
+          <div class="pr-tete"><span class="mono">OD</span><span><span class="pr-nom">Ophélie Destombes</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>6 rue Alexandre Bisiaux, Somain</span></span><a href="tel:+33327862478"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 86 24 78</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="cecile dewambrechies infirmiere somain 6 rue alexandre bisiaux">
+          <div class="pr-tete"><span class="mono">CD</span><span><span class="pr-nom">Cécile Dewambrechies</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>6 rue Alexandre Bisiaux, Somain</span></span><a href="tel:+33327862478"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 86 24 78</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="laurence drumez infirmiere somain 6 rue alexandre bisiaux">
+          <div class="pr-tete"><span class="mono">LD</span><span><span class="pr-nom">Laurence Drumez</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>6 rue Alexandre Bisiaux, Somain</span></span><a href="tel:+33327862478"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 86 24 78</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="sandrine maciejewski infirmiere somain 168 rue edmond simon">
+          <div class="pr-tete"><span class="mono">SM</span><span><span class="pr-nom">Sandrine Maciejewski</span><span class="pr-prof">Infirmière</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>168 rue Edmond Simon, Somain</span></span><a href="tel:+33327997470"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 99 74 70</a></div>
+        </li>
+
+        <li class="praticien" data-cat="infirmier" data-fam="v" data-rech="franck runco infirmier somain 5a rue jean-baptiste durieux">
+          <div class="pr-tete"><span class="mono">FR</span><span><span class="pr-nom">Franck Runco</span><span class="pr-prof">Infirmier</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>5A rue Jean-Baptiste Durieux, Somain</span></span><a href="tel:+33634372446"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 34 37 24 46</a></div>
+        </li>
+
+        <li class="praticien" data-cat="kine" data-fam="b" data-rech="mathilde delsol kinesitherapeute masseuse kiné somain 27 bis rue suzanne lanoy">
+          <div class="pr-tete"><span class="mono">MD</span><span><span class="pr-nom">Mathilde Delsol</span><span class="pr-prof">Masseuse-kinésithérapeute</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>27 bis rue Suzanne Lanoy, Somain</span></span><a href="tel:+33767584492"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>07 67 58 44 92</a></div>
+        </li>
+
+        <li class="praticien" data-cat="kine" data-fam="b" data-rech="marion despres kinesitherapeute masseuse kiné somain 27 bis rue suzanne lanoy">
+          <div class="pr-tete"><span class="mono">MD</span><span><span class="pr-nom">Marion Despres</span><span class="pr-prof">Masseuse-kinésithérapeute</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>27 bis rue Suzanne Lanoy, Somain</span></span><a href="tel:+33673933657"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 73 93 36 57</a></div>
+        </li>
+
+        <li class="praticien" data-cat="kine" data-fam="b" data-rech="veronique morelle kinesitherapeute masseuse kiné somain 27 bis rue suzanne lanoy">
+          <div class="pr-tete"><span class="mono">VM</span><span><span class="pr-nom">Véronique Morelle</span><span class="pr-prof">Masseuse-kinésithérapeute</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>27 bis rue Suzanne Lanoy, Somain</span></span><a href="tel:+33689424490"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 89 42 44 90</a></div>
+        </li>
+
+        <li class="praticien" data-cat="kine" data-fam="b" data-rech="sarah stocki kinesitherapeute masseuse kiné somain 168 rue edmond simon">
+          <div class="pr-tete"><span class="mono">SS</span><span><span class="pr-nom">Sarah Stocki</span><span class="pr-prof">Masseuse-kinésithérapeute</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>168 rue Edmond Simon, Somain</span></span><a href="tel:+33681166487"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 81 16 64 87</a></div>
+        </li>
+
+        <li class="praticien" data-cat="kine" data-fam="b" data-rech="maite turut kinesitherapeute masseuse kiné somain 16 rue anatole france">
+          <div class="pr-tete"><span class="mono">MT</span><span><span class="pr-nom">Maïté Turut</span><span class="pr-prof">Masseuse-kinésithérapeute</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>16 rue Anatole France, Somain</span></span><a href="tel:+33633165339"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 33 16 53 39</a></div>
+        </li>
+
+        <li class="praticien" data-cat="pharmacien" data-fam="v" data-rech="marjorie duffourg pharmacienne somain 10 rue leon gambetta">
+          <div class="pr-tete"><span class="mono">MD</span><span><span class="pr-nom">Marjorie Duffourg</span><span class="pr-prof">Pharmacienne</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>10 rue Léon Gambetta, Somain</span></span><a href="tel:+33327906277"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 62 77</a></div>
+        </li>
+
+        <li class="praticien" data-cat="pharmacien" data-fam="v" data-rech="yannick duffourg pharmacien somain 10 rue leon gambetta">
+          <div class="pr-tete"><span class="mono">YD</span><span><span class="pr-nom">Yannick Duffourg</span><span class="pr-prof">Pharmacien</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>10 rue Léon Gambetta, Somain</span></span><a href="tel:+33327906277"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 62 77</a></div>
+        </li>
+
+        <li class="praticien" data-cat="pharmacien" data-fam="v" data-rech="mathieu honvault pharmacien rieulay 48 rue des sarts">
+          <div class="pr-tete"><span class="mono">MH</span><span><span class="pr-nom">Mathieu Honvault</span><span class="pr-prof">Pharmacien</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>48 rue des Sarts, Rieulay</span></span><a href="tel:+33327860545"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 86 05 45</a></div>
+        </li>
+
+        <li class="praticien" data-cat="pharmacien" data-fam="v" data-rech="francois rebier pharmacien somain 1 rue suzanne lanoy">
+          <div class="pr-tete"><span class="mono">FR</span><span><span class="pr-nom">François Rebier</span><span class="pr-prof">Pharmacien</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>1 rue Suzanne Lanoy, Somain</span></span><a href="tel:+33327928884"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 92 88 84</a></div>
+        </li>
+
+        <li class="praticien" data-cat="sagefemme" data-fam="v" data-rech="caroline dupont sage-femme somain 72 rue pasteur">
+          <div class="pr-tete"><span class="mono">CD</span><span><span class="pr-nom">Caroline Dupont</span><span class="pr-prof">Sage-femme</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>72 rue Pasteur, Somain</span></span><a href="tel:+33766055696"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>07 66 05 56 96</a></div>
+        </li>
+
+        <li class="praticien" data-cat="sagefemme" data-fam="v" data-rech="caroline legrand sage-femme somain 72 rue pasteur">
+          <div class="pr-tete"><span class="mono">CL</span><span><span class="pr-nom">Caroline Legrand</span><span class="pr-prof">Sage-femme</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>72 rue Pasteur, Somain</span></span><a href="tel:+33672828091"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 72 82 80 91</a></div>
+        </li>
+
+        <li class="praticien" data-cat="sagefemme" data-fam="v" data-rech="naomie lichmann sage-femme fenain 64 rue henri barbusse">
+          <div class="pr-tete"><span class="mono">NL</span><span><span class="pr-nom">Naomie Lichmann</span><span class="pr-prof">Sage-femme</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>64 rue Henri Barbusse, Fenain</span></span><a href="tel:+33973056733"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>09 73 05 67 33</a></div>
+        </li>
+
+        <li class="praticien" data-cat="orthophoniste" data-fam="b" data-rech="catherine laigle orthophoniste somain 3 rue jean-baptiste durieux">
+          <div class="pr-tete"><span class="mono">CL</span><span><span class="pr-nom">Catherine Laigle</span><span class="pr-prof">Orthophoniste</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>3 rue Jean-Baptiste Durieux, Somain</span></span><a href="tel:+33327906430"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 90 64 30</a></div>
+        </li>
+
+        <li class="praticien" data-cat="dieteticienne" data-fam="b" data-rech="christelle delecourt dieteticienne somain 27 bis rue suzanne lanoy vacataire">
+          <div class="pr-tete"><span class="mono">CD</span><span><span class="pr-nom">Christelle Delecourt</span><span class="pr-prof">Diététicienne</span><span class="pr-note">Vacataire, mise à disposition du CH de Somain</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>27 bis rue Suzanne Lanoy, Somain</span></span><a href="tel:+33789331933"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>07 89 33 19 33</a></div>
+        </li>
+
+        <li class="praticien" data-cat="dieteticienne" data-fam="b" data-rech="pervenche haldric dieteticienne somain 16 rue anatole france">
+          <div class="pr-tete"><span class="mono">PH</span><span><span class="pr-nom">Pervenche Haldric</span><span class="pr-prof">Diététicienne</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>16 rue Anatole France, Somain</span></span><a href="tel:+33766981630"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>07 66 98 16 30</a></div>
+        </li>
+
+        <li class="praticien" data-cat="apa" data-fam="b" data-rech="catherine delrot infirmiere coordination apa somain 61 rue joseph bouliez activite physique adaptee">
+          <div class="pr-tete"><span class="mono">CD</span><span><span class="pr-nom">Catherine Delrot</span><span class="pr-prof">Infirmière coordinatrice APA</span><span class="pr-note">Dispositif Activité Physique Adaptée</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>61 rue Joseph Bouliez, Somain</span></span><a href="tel:+33327930931"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 93 09 31</a></div>
+        </li>
+
+        <li class="praticien" data-cat="podologue" data-fam="b" data-rech="nicolas meigneux pedicure podologue somain rue des galibots">
+          <div class="pr-tete"><span class="mono">NM</span><span><span class="pr-nom">Nicolas Meigneux</span><span class="pr-prof">Pédicure-podologue</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>rue des Galibots, Somain</span></span><a href="tel:+33327956134"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>03 27 95 61 34</a></div>
+        </li>
+
+        <li class="praticien" data-cat="osteopathe" data-fam="b" data-rech="caroline ridon osteopathe somain 16 rue anatole france">
+          <div class="pr-tete"><span class="mono">CR</span><span><span class="pr-nom">Caroline Ridon</span><span class="pr-prof">Ostéopathe</span></span></div>
+          <div class="pr-coords"><span><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>16 rue Anatole France, Somain</span></span><a href="tel:+33672403219"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.6 3.2 8.2 6.6 6.4 8.2a9.6 9.6 0 0 0 5.4 5.4l1.6-1.8 3.4 1.6-.6 3a1.3 1.3 0 0 1-1.4 1C7.9 16.8 3.2 12.1 2.6 5.6a1.3 1.3 0 0 1 1-1.4l3-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>06 72 40 32 19</a></div>
+        </li>
+
+      </ul>
+
+      <p class="vide" id="aucun-resultat" hidden>Aucun praticien ne correspond à votre recherche. Essayez un autre mot, ou appelez la MSP au <a href="tel:+33772147325" style="white-space:nowrap;">07 72 14 73 25</a>.</p>
+      <p class="note-equipe" id="resultat-filtre" role="status"></p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Nos services</p>
+        <h2>Onze professions, un seul parcours de soins</h2>
+        <p>Du suivi médical courant à la rééducation, à la prévention et à l'activité physique adaptée.</p>
+      </div>
+
+      <div class="services">
+        <article class="service"><span class="puce" aria-hidden="true"></span><h3>Médecine générale</h3><p>Consultations de suivi, urgences du quotidien, certificats, dépistages et orientation vers les spécialistes.</p><p class="nb">4 médecins</p></article>
+        <article class="service"><span class="puce" aria-hidden="true"></span><h3>Soins infirmiers</h3><p>Pansements, injections, prises de sang, surveillance de traitements et soins à domicile.</p><p class="nb">9 infirmiers libéraux</p></article>
+        <article class="service"><span class="puce" aria-hidden="true"></span><h3>Pratique avancée infirmière</h3><p>Suivi rapproché des maladies chroniques, en relais du médecin traitant, avec un temps d’écoute plus long.</p><p class="nb">1 infirmier en pratique avancée</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Masso-kinésithérapie</h3><p>Rééducation après blessure ou opération, kiné respiratoire, dos et articulations, équilibre.</p><p class="nb">5 kinésithérapeutes</p></article>
+        <article class="service"><span class="puce" aria-hidden="true"></span><h3>Pharmacie</h3><p>Délivrance des traitements, conseil, vaccination et accompagnement des ordonnances complexes.</p><p class="nb">4 pharmaciens</p></article>
+        <article class="service"><span class="puce" aria-hidden="true"></span><h3>Suivi gynécologique et grossesse</h3><p>Suivi de grossesse, préparation à la naissance, contraception, rééducation et suivi post-natal.</p><p class="nb">3 sages-femmes</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Orthophonie</h3><p>Troubles du langage et de la parole chez l’enfant et l’adulte, rééducation après AVC, déglutition.</p><p class="nb">1 orthophoniste</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Diététique et nutrition</h3><p>Accompagnement du diabète, du surpoids, des régimes prescrits et de l’équilibre alimentaire.</p><p class="nb">2 diététiciennes</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Activité physique adaptée</h3><p>Reprise encadrée de l’activité physique sur prescription, pour les maladies chroniques et l’après-cancer.</p><p class="nb">1 infirmière coordinatrice</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Pédicurie-podologie</h3><p>Soins des pieds, semelles orthopédiques, suivi du pied diabétique et troubles de la marche.</p><p class="nb">1 pédicure-podologue</p></article>
+        <article class="service b"><span class="puce" aria-hidden="true"></span><h3>Ostéopathie</h3><p>Prise en charge manuelle des douleurs articulaires, cervicales et lombaires, du nourrisson au senior.</p><p class="nb">1 ostéopathe</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="actualites" class="bande-alt">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Actualités</p>
+        <h2>Événements et actions de la MSP</h2>
+        <p>La prévention est l’un des quatre axes de notre projet de santé. Elle se construit avec les habitants, au sein du comité usagers.</p>
+      </div>
+
+      <nav class="sous-nav" aria-label="Dans cette rubrique">
+        <a href="#usagers">Comité usagers</a>
+        <a href="#prevention">Actions de prévention</a>
+      </nav>
+
+      <h3 style="font-family:var(--serif); font-size:1.45rem; font-weight:600; margin-bottom:1.4rem;">À l'affiche</h3>
+
+      <div class="evenements">
+
+        <article class="evenement">
+          <div class="affiche">
+            <img class="poster-img" src="affiche-septembre-en-or.jpg" alt="Affiche Septembre en Or : la Marche, dimanche 13 septembre au terril de Rieulay" width="620" height="877" loading="lazy">
+          </div>
+          <div class="corps">
+            <span class="quand">Prochain événement</span>
+            <h3>Septembre en Or — la Marche</h3>
+            <p style="color:var(--encre-2); font-size:.98rem;">Ensemble, mobilisons-nous contre les cancers pédiatriques. Un parcours accessible à tous, petits et grands, pour soutenir la recherche.</p>
+            <ul class="detail">
+              <li><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.4" y="4.4" width="13.2" height="12.2" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3.4 8.2h13.2M7 2.8v3M13 2.8v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Dimanche 13 septembre</b>, rendez-vous à 9 h 45</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>Terril de Rieulay — départ de la Chèvrerie</span></li>
+            </ul>
+            <p class="par">Une action organisée par les usagers et les professionnels de la MSP.</p>
+          </div>
+        </article>
+
+        <article class="evenement recurrent">
+          <div class="affiche">
+            <img class="poster-img" src="affiche-foulees-sante.jpg" alt="Affiche des Foulées Santé : marche chaque jeudi au parc Anne Frank, Somain" width="620" height="877" loading="lazy">
+          </div>
+          <div class="corps">
+            <span class="quand">Chaque semaine</span>
+            <h3>Les Foulées Santé</h3>
+            <p style="color:var(--encre-2); font-size:.98rem;">Une marche de 1 à 1,5 km pour se maintenir en forme, ouverte à tous, sans inscription. Venez comme vous êtes.</p>
+            <ul class="detail">
+              <li><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.4" stroke="currentColor" stroke-width="1.8"/><path d="M10 5.6V10l2.9 1.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Tous les jeudis</b> à 9 h 50</span></li>
+              <li><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 18s6-5.1 6-9.4A6 6 0 1 0 4 8.6C4 12.9 10 18 10 18Z" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8.4" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg><span>Parc Anne Frank, Somain</span></li>
+            </ul>
+            <p class="par">Organisé par le comité usagers de la MSP.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <h3 id="usagers" style="font-family:var(--serif); font-size:1.45rem; font-weight:600; margin:3.4rem 0 1.2rem; scroll-margin-top:100px;">Le comité usagers</h3>
+
+      <div class="duo">
+        <div class="lisible" style="display:flex; flex-direction:column; gap:1rem; color:var(--encre-2);">
+          <p>Le comité usagers réunit des habitants de Somain et des communes voisines qui participent à la vie de la maison de santé. Ce ne sont pas des professionnels de santé : ce sont des patients, des aidants, des retraités, des parents, qui donnent de leur temps.</p>
+          <p>Ils organisent les Foulées Santé du jeudi, tiennent des stands lors des campagnes de dépistage, montent des marches solidaires comme Septembre en Or, et font remonter aux professionnels ce qui manque ou ce qui fonctionne mal sur le territoire. Pérenniser ce comité fait partie de notre projet de santé.</p>
+          <p><strong style="color:var(--encre);">Vous souhaitez les rejoindre ?</strong> Aucune compétence particulière n'est demandée, seulement l'envie de participer. Écrivez-nous ou appelez la MSP.</p>
+          <p style="display:flex; flex-wrap:wrap; gap:.85rem; margin-top:.4rem;">
+            <a class="btn btn-vert" style="padding:.75rem 1.25rem; font-size:1rem;" href="mailto:mspsomainetenvirons@gmail.com?subject=Rejoindre%20le%20comit%C3%A9%20usagers">Rejoindre le comité usagers</a>
+            <a class="btn btn-ligne" style="padding:.75rem 1.25rem; font-size:1rem;" href="tel:+33772147325">07 72 14 73 25</a>
+          </p>
+        </div>
+
+        <div class="bloc">
+          <h3>Ce que font les usagers</h3>
+          <ul class="infos-acces">
+            <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h4l1.6-4 2.6 8 1.8-4H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Les marches hebdomadaires des Foulées Santé</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16.8s-6.2-3.6-6.2-8A3.6 3.6 0 0 1 10 6.3a3.6 3.6 0 0 1 6.2 2.5c0 4.4-6.2 8-6.2 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Les marches solidaires : Septembre en Or, Octobre Rose</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="6" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 6V4.5h6V6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Les stands d'information lors des campagnes de dépistage</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 5h12v8H9l-3.5 3v-3H4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Le retour d'expérience des patients auprès des professionnels</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 id="prevention" style="font-family:var(--serif); font-size:1.45rem; font-weight:600; margin:3.4rem 0 .8rem; scroll-margin-top:100px;">Les actions de prévention</h3>
+      <p style="color:var(--encre-2); max-width:62ch; margin-bottom:1.6rem;">Chaque année, la MSP mène une dizaine de campagnes auprès des habitants, des collèges et des lycées du secteur. Plusieurs sont conduites avec la CPTS du territoire.</p>
+
+      <ul class="campagnes">
+        <li class="campagne"><b>Mars Bleu</b><span>Dépistage du cancer colorectal : information, remise de kits, formation des infirmiers libéraux.</span><span class="avec">Avec la CPTS</span></li>
+        <li class="campagne"><b>Santé de la femme</b><span>Octobre Rose, dépistage du cancer du sein, groupe de travail ménopause.</span></li>
+        <li class="campagne"><b>Septembre en Or</b><span>Mobilisation contre les cancers pédiatriques et soutien à la recherche.</span></li>
+        <li class="campagne"><b>HPV, contraception et sexualité</b><span>Interventions en lycée et en collège, escape game de prévention, quiz lors des marches.</span><span class="avec">Avec la CPTS</span></li>
+        <li class="campagne"><b>Parcours du Cœur</b><span>Prévention cardiovasculaire et remise en mouvement, chaque printemps depuis 2021.</span><span class="avec">Avec la CPTS</span></li>
+        <li class="campagne"><b>Cancers masculins</b><span>Movember : dépistage de la prostate et des cancers masculins, briser le silence.</span><span class="avec">Avec la CPTS</span></li>
+        <li class="campagne"><b>Perturbateurs endocriniens</b><span>Comprendre où ils se cachent au quotidien et comment réduire son exposition.</span><span class="avec">Avec la CPTS</span></li>
+        <li class="campagne"><b>Petite enfance</b><span>Ateliers pour les jeunes parents sur le développement, le sommeil et l’alimentation.</span></li>
+        <li class="campagne"><b>Promotion des métiers de la santé</b><span>Rencontres avec les collégiens et lycéens du secteur, fiches métier, forums des établissements.</span></li>
+        <li class="campagne"><b>MSP en Mouvement</b><span>Activité physique adaptée, urban trail et trail des usagers.</span></li>
+      </ul>
+
+      <p style="color:var(--encre-2); font-size:.96rem; margin-top:2.4rem;">Autres thèmes travaillés depuis 2021 :</p>
+      <ul class="themes">
+        <li>Mois sans tabac</li>
+        <li>Juin Vert</li>
+        <li>Gestes de premiers secours</li>
+        <li>Diabète</li>
+        <li>Santé mentale</li>
+        <li>Vaccination</li>
+        <li>Troubles du langage chez les jeunes</li>
+        <li>Mon espace Santé</li>
+        <li>Don du sang</li>
+        <li>Éducation thérapeutique du patient</li>
+        <li>Journée de la femme</li>
+        <li>Bien-être des professionnels</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rendez-vous">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Rendez-vous</p>
+        <h2>Prendre rendez-vous</h2>
+        <p>Chaque praticien gère son propre agenda : les horaires varient d'un cabinet à l'autre.</p>
+      </div>
+
+      <div class="duo">
+        <div class="bloc">
+          <h3>Deux façons de réserver</h3>
+          <ul class="liste-rdv">
+            <li>
+              <span class="num" aria-hidden="true">1</span>
+              <div>
+                <b>En ligne, à toute heure</b>
+                <p>Les praticiens équipés de Doctolib affichent leurs créneaux disponibles en temps réel.</p>
+                <p style="margin-top:.7rem;"><a class="btn btn-vert" style="padding:.7rem 1.15rem; font-size:.97rem;" href="https://www.doctolib.fr/maison-de-sante/somain/maison-de-sante-pluridisciplinaire-somain" target="_blank" rel="noopener">Réserver sur Doctolib</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="num" aria-hidden="true">2</span>
+              <div>
+                <b>Par téléphone, auprès du cabinet</b>
+                <p>Le numéro de chaque praticien figure sur sa fiche, dans la section <a href="#equipe">Nos praticiens</a>. Pour le cabinet médical du 23 rue Anatole France : <a href="tel:+33327906033" style="font-weight:700; white-space:nowrap;">03 27 90 60 33</a>.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="alerte">
+            <b>En cas d'urgence vitale</b>, composez le <strong>15</strong> (SAMU) ou le <strong>112</strong>. Aux heures de fermeture des cabinets, appelez le <strong>03 20 33 20 33</strong> (permanence de soins) avant de vous rendre aux urgences.
+          </div>
+        </div>
+
+        <div class="bloc">
+          <h3>Horaires des cabinets médicaux</h3>
+          <p style="color:var(--encre-2); font-size:.96rem; margin-bottom:1rem;">23 rue Anatole France et 40 bis rue Pasteur, Somain — médecins généralistes et infirmier en pratique avancée.</p>
+          <div class="tableau-wrap">
+            <table class="horaires">
+              <tbody>
+                <tr><th scope="row">Du lundi au vendredi</th><td>8 h 00 – 20 h 00</td></tr>
+                <tr><th scope="row">Samedi</th><td>8 h 00 – 12 h 00</td></tr>
+                <tr><th scope="row">Dimanche</th><td>Fermé</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:.7rem; font-size:.94rem; color:var(--encre-2);">Pour les autres cabinets — infirmiers, kinésithérapeutes, pharmacies, sages-femmes — appelez directement le praticien concerné.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cabinets" class="bande-alt">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Nos cabinets</p>
+        <h2>Où nous trouver</h2>
+        <p>Dix-sept lieux d'exercice répartis sur Somain et les communes voisines. Le siège de la MSP se trouve au 40 bis rue Pasteur.</p>
+      </div>
+
+      <h3 class="commune-titre">Somain</h3>
+      <ul class="cabinets">
+        <li class="cabinet siege"><span class="etiq">Siège de la MSP</span><span class="adr">40 bis rue Pasteur</span><span class="qui">Médecine générale — D<sup>r</sup> Olivier Petitpré</span><a class="tel" href="tel:+33327906033">03 27 90 60 33</a></li>
+        <li class="cabinet"><span class="adr">29 rue Alexandre Bisiaux</span><span class="qui">Cabinet infirmier — Isabelle Barrao</span><a class="tel" href="tel:+33327973778">03 27 97 37 78</a></li>
+        <li class="cabinet"><span class="adr">6 rue Alexandre Bisiaux</span><span class="qui">Cabinet infirmier — F. Delannoy, O. Destombes, C. Dewambrechies, L. Drumez</span><a class="tel" href="tel:+33327862478">03 27 86 24 78</a></li>
+        <li class="cabinet"><span class="adr">5A rue Jean-Baptiste Durieux</span><span class="qui">Cabinet infirmier — L. Betremieux, F. Runco</span></li>
+        <li class="cabinet"><span class="adr">3 rue Jean-Baptiste Durieux</span><span class="qui">Orthophonie — Catherine Laigle</span><a class="tel" href="tel:+33327906430">03 27 90 64 30</a></li>
+        <li class="cabinet"><span class="adr">168 rue Edmond Simon</span><span class="qui">Cabinet infirmier et kinésithérapie</span><a class="tel" href="tel:+33327997470">03 27 99 74 70</a></li>
+        <li class="cabinet"><span class="adr">27 bis rue Suzanne Lanoy</span><span class="qui">Kinésithérapie et diététique — M. Delsol, M. Despres, V. Morelle, C. Delecourt</span></li>
+        <li class="cabinet"><span class="adr">1 rue Suzanne Lanoy</span><span class="qui">Pharmacie — François Rebier</span><a class="tel" href="tel:+33327928884">03 27 92 88 84</a></li>
+        <li class="cabinet"><span class="adr">10 rue Léon Gambetta</span><span class="qui">Pharmacie — M. et Y. Duffourg</span><a class="tel" href="tel:+33327906277">03 27 90 62 77</a></li>
+        <li class="cabinet"><span class="adr">23 rue Anatole France</span><span class="qui">Cabinet médical — D<sup>r</sup> Langagne, D<sup>r</sup> Maltese, et J. Marchese (IPA)</span><a class="tel" href="tel:+33327906033">03 27 90 60 33</a></li>
+        <li class="cabinet"><span class="adr">16 rue Anatole France</span><span class="qui">Kinésithérapie, diététique et ostéopathie</span></li>
+        <li class="cabinet"><span class="adr">72 rue Pasteur</span><span class="qui">Sages-femmes — C. Dupont, C. Legrand</span></li>
+        <li class="cabinet"><span class="adr">61 rue Joseph Bouliez</span><span class="qui">Activité physique adaptée — Catherine Delrot</span><a class="tel" href="tel:+33327930931">03 27 93 09 31</a></li>
+        <li class="cabinet"><span class="adr">rue des Galibots</span><span class="qui">Pédicurie-podologie — Nicolas Meigneux</span><a class="tel" href="tel:+33327956134">03 27 95 61 34</a></li>
+      </ul>
+
+      <h3 class="commune-titre">Wandignies-Hamage</h3>
+      <ul class="cabinets">
+        <li class="cabinet"><span class="adr">30 rue Robert Planchon</span><span class="qui">Médecine générale — Dr Julianne Chatelain Kong</span><a class="tel" href="tel:+33374014145">03 74 01 41 45</a></li>
+      </ul>
+
+      <h3 class="commune-titre">Fenain</h3>
+      <ul class="cabinets">
+        <li class="cabinet"><span class="adr">64 rue Henri Barbusse</span><span class="qui">Sage-femme — Naomie Lichmann</span><a class="tel" href="tel:+33973056733">09 73 05 67 33</a></li>
+      </ul>
+
+      <h3 class="commune-titre">Rieulay</h3>
+      <ul class="cabinets">
+        <li class="cabinet"><span class="adr">48 rue des Sarts</span><span class="qui">Pharmacie — Mathieu Honvault</span><a class="tel" href="tel:+33327860545">03 27 86 05 45</a></li>
+      </ul>
+
+      <div class="actions" style="display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2.4rem;">
+        <a class="btn btn-vert" href="https://www.google.com/maps/search/?api=1&query=40+bis+rue+Pasteur+59490+Somain" target="_blank" rel="noopener">Ouvrir le 40 bis rue Pasteur dans Maps</a>
+        <a class="btn btn-ligne" href="#contact">Nous contacter</a>
+      </div>
+
+      <div class="bloc" style="margin-top:2.4rem;">
+        <h3>Bon à savoir avant votre visite</h3>
+        <ul class="infos-acces">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 3.5 6v5c0 4 2.8 6.4 6.5 7.5 3.7-1.1 6.5-3.5 6.5-7.5V6L10 2.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M7.6 10.2 9.3 12l3.3-3.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><b>Carte Vitale</b> — pensez à l'apporter, ainsi que votre attestation de mutuelle et votre ordonnance.</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.4" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.6V10l2.9 1.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span><b>Les horaires varient d'un cabinet à l'autre</b> — appelez le praticien avant de vous déplacer.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Contact</p>
+        <h2>Une question ? Écrivez-nous</h2>
+        <p>Ce formulaire est destiné à la coordination de la MSP. Il ne remplace pas un appel en cas d’urgence ni une demande de rendez-vous avec votre praticien. Pour un suivi médical ou un résultat d’examen, merci de contacter directement votre cabinet.</p>
+      </div>
+
+      <div class="duo">
+        <div class="bloc">
+          <h3>Formulaire de contact</h3>
+          <form id="form-contact" novalidate method="POST" action="https://formsubmit.co/votre-email@exemple.com">
+            <input type="hidden" name="_subject" value="Nouveau message depuis le site MSP Somain et environs">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://votre-site.fr/merci.html">
+
+            <div class="champ">
+              <label for="f-nom">Nom et prénom</label>
+              <input type="text" id="f-nom" name="nom" autocomplete="name" required>
+            </div>
+
+            <div class="champ">
+              <label for="f-mail">Votre adresse email</label>
+              <input type="email" id="f-mail" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="champ">
+              <label for="f-tel">Téléphone (facultatif)</label>
+              <input type="tel" id="f-tel" name="telephone" autocomplete="tel">
+            </div>
+
+            <div class="champ">
+              <label for="f-msg">Votre message</label>
+              <textarea id="f-msg" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-vert">Envoyer le message</button>
+            <p class="mention-form" id="form-retour" role="status"></p>
+            <p class="mention-form">Vos données sont utilisées uniquement pour répondre à votre demande. N’indiquez aucune information médicale dans ce formulaire.</p>
+          </form>
+        </div>
+
+        <div class="bloc">
+          <h3>Nous joindre directement</h3>
+          <ul class="coord">
+            <li><small>Téléphone de la MSP</small><a href="tel:+33772147325">07 72 14 73 25</a></li>
+            <li><small>Email</small><a href="mailto:mspsomainetenvirons@gmail.com">mspsomainetenvirons@gmail.com</a></li>
+            <li><small>Téléphone du cabinet médical</small><a href="tel:+33327906033">03 27 90 60 33</a></li>
+            <li><small>Cabinet médical</small>23 rue Anatole France, 59490 Somain</li>
+            <li><small>Siège de la MSP</small>40 bis rue Pasteur, 59490 Somain</li>
+            <li><small>Ouverture</small><span style="font-size:1rem; font-weight:400;">Du lundi au vendredi, 8 h 00 – 20 h 00<br>Samedi, 8 h 00 – 12 h 00</span></li>
+            <li><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=100063984104138&locale=fr_FR" target="_blank" rel="noopener">MSP Somain et environs</a></li>
+            <li><small>Urgences</small><strong style="font-size:1.12rem;">15</strong> (SAMU) ou <strong style="font-size:1.12rem;">112</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mentions" class="bande-alt">
+    <div class="rail">
+      <div class="tete-section">
+        <p class="eyebrow">Informations légales</p>
+        <h2>Mentions légales et confidentialité</h2>
+      </div>
+
+      <div class="duo">
+        <div class="legal">
+          <h3>Éditeur du site</h3>
+          <dl>
+            <dt>Dénomination</dt><dd>SISA MSP Somain et environs</dd>
+            <dt>Forme juridique</dt><dd>Société Interprofessionnelle de Soins Ambulatoires (SISA)</dd>
+            <dt>Gérante</dt><dd>D<sup>r</sup> Perrine Langagne</dd>
+            <dt>Siège social</dt><dd>40 bis rue Pasteur, 59490 Somain</dd>
+            <dt>Téléphone</dt><dd><a href="tel:+33772147325">07 72 14 73 25</a></dd>
+            <dt>Email</dt><dd><a href="mailto:mspsomainetenvirons@gmail.com">mspsomainetenvirons@gmail.com</a></dd>
+            <dt>SIRET</dt><dd>899 275 267 00016</dd>
+          </dl>
+
+          <h3>Responsable de la publication</h3>
+          <p>D<sup>r</sup> Perrine Langagne, en qualité de gérante de la SISA MSP Somain et environs.</p>
+
+          <h3>Hébergement</h3>
+          <p>Le site est hébergé par <strong>GitHub, Inc.</strong> (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</p>
+          <p>Entité européenne du groupe : GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas.</p>
+
+          <h3>Propriété intellectuelle</h3>
+          <p>Le logo, les textes, les visuels et les affiches présentés sur ce site sont la propriété de la SISA MSP Somain et environs ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+
+          <h3>Informations sur les professionnels de santé</h3>
+          <p>Les praticiens présentés exercent en libéral, chacun dans son propre cabinet. Ils sont indépendants dans l'exercice de leur art et responsables des soins qu'ils dispensent. Les coordonnées publiées le sont avec leur accord ; toute demande de modification ou de retrait peut être adressée à la MSP par email.</p>
+
+          <h3>Avertissement</h3>
+          <p>Les informations de ce site ont une visée informative et ne constituent en aucun cas un avis médical, un diagnostic ou une prescription. Elles ne remplacent pas une consultation. En cas d'urgence, appelez le 15 (SAMU) ou le 112.</p>
+        </div>
+
+        <div class="legal" id="confidentialite" style="scroll-margin-top:100px;">
+          <h3>Politique de confidentialité</h3>
+          <p>La SISA MSP Somain et environs, représentée par sa gérante, est responsable du traitement des données collectées sur ce site.</p>
+
+          <h3>Données collectées</h3>
+          <p>Ce site ne dépose aucun cookie et ne recourt à aucun outil de mesure d'audience. Aucun formulaire de suivi, aucun traceur publicitaire n'y figure.</p>
+          <p>Le site est hébergé aux États-Unis par GitHub, Inc. Lors de la consultation des pages, l'hébergeur enregistre l'adresse IP du visiteur dans ses journaux techniques, à des fins de sécurité et pendant une durée limitée. La MSP n'a pas accès à ces journaux et n'en fait aucun usage.</p>
+          <p>Le formulaire de contact n'envoie rien à un serveur : il prépare un message dans votre propre logiciel de messagerie, que vous restez libre d'envoyer ou non. Les informations que vous y saisissez — nom, email, téléphone, message — ne nous parviennent donc qu'au moment où vous choisissez d'envoyer ce message.</p>
+
+          <h3>Finalité et conservation</h3>
+          <p>Les messages reçus sont utilisés uniquement pour répondre à votre demande. Ils sont conservés le temps nécessaire au traitement de celle-ci, puis supprimés. Ils ne sont ni cédés, ni revendus, ni utilisés à des fins commerciales ou de prospection.</p>
+          <p>Ils arrivent dans la boîte de réception de la MSP, hébergée par Google (Gmail), qui applique sa propre politique de confidentialité. Pour une demande que vous préférez garder hors de ce circuit, appelez la MSP au 07 72 14 73 25.</p>
+
+          <h3>Données de santé</h3>
+          <p>Ce site n'est pas un outil de suivi médical. N'y transmettez aucune information relative à votre santé : ni symptôme, ni traitement, ni résultat d'examen. Ces échanges relèvent de la consultation, de votre dossier médical ou de Mon espace Santé.</p>
+
+          <h3>Vos droits</h3>
+          <p>Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données. Pour l'exercer, écrivez à <a href="mailto:mspsomainetenvirons@gmail.com">mspsomainetenvirons@gmail.com</a> ou à la SISA MSP Somain et environs, 40 bis rue Pasteur, 59490 Somain.</p>
+          <p>En cas de désaccord persistant, vous pouvez saisir la CNIL — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — ou déposer une plainte sur <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>.</p>
+
+          <h3>Liens externes</h3>
+          <p>Ce site renvoie vers des services tiers (Doctolib, Facebook, Ameli, Santé.fr) qui appliquent leurs propres politiques de confidentialité. La MSP n'exerce aucun contrôle sur les données que ces services collectent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-pied">
+  <div class="rail">
+    <div class="marque-pied">
+      <img src="logo.png" alt="" width="46" height="55" style="height:55px;width:auto">
+      <div>
+        <b style="color:var(--encre); display:block; font-size:1rem;">MSP Somain et environs</b>
+        <p style="margin-top:.35rem;">Des professionnels de santé libéraux travaillant ensemble tout en conservant leurs cabinets dans le somainois.</p>
+        <p style="margin-top:.7rem;">40 bis rue Pasteur, 59490 Somain<br><a href="tel:+33772147325">07 72 14 73 25</a><br><a href="mailto:mspsomainetenvirons@gmail.com">mspsomainetenvirons@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div>
+      <h3>Le site</h3>
+      <ul>
+        <li><a href="#presentation">La maison de santé</a></li>
+        <li><a href="#equipe">Nos praticiens</a></li>
+        <li><a href="#services">Nos services</a></li>
+        <li><a href="#actualites">Actualités et actions</a></li>
+        <li><a href="#usagers">Comité usagers</a></li>
+        <li><a href="#prevention">Actions de prévention</a></li>
+        <li><a href="#rendez-vous">Rendez-vous</a></li>
+        <li><a href="#cabinets">Nos cabinets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="https://www.doctolib.fr/maison-de-sante/somain/maison-de-sante-pluridisciplinaire-somain" target="_blank" rel="noopener">Prendre rendez-vous sur Doctolib</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100063984104138&locale=fr_FR" target="_blank" rel="noopener">Notre page Facebook</a></li>
+        <li><a href="https://www.ameli.fr" target="_blank" rel="noopener">Ameli — Assurance Maladie</a></li>
+        <li><a href="https://sante.fr" target="_blank" rel="noopener">Santé.fr — annuaire santé</a></li>
+        <li><a href="#mentions">Mentions légales</a></li>
+        <li><a href="#confidentialite">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bas-pied">
+    <div class="rail">
+      <span>© <span id="annee">2026</span> MSP Somain et environs — tous droits réservés.</span>
+      <span>Urgences : 15 (SAMU) · 112 (numéro européen) · 114 (sourds et malentendants)</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var an = document.getElementById("annee");
+  if (an) { an.textContent = String(new Date().getFullYear()); }
+
+  var burger = document.getElementById("burger");
+  var nav = document.getElementById("nav-liens");
+  if (burger && nav) {
+    burger.addEventListener("click", function () {
+      var ouvert = nav.classList.toggle("ouvert");
+      burger.setAttribute("aria-expanded", ouvert ? "true" : "false");
+    });
+
+    nav.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        nav.classList.remove("ouvert");
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  var filtres = Array.prototype.slice.call(document.querySelectorAll(".filtre"));
+  var fiches = Array.prototype.slice.call(document.querySelectorAll(".praticien"));
+  var champRech = document.getElementById("rech");
+  var retourFiltre = document.getElementById("resultat-filtre");
+  var aucun = document.getElementById("aucun-resultat");
+  var catActive = "tous";
+
+  function sansAccent(t) {
+    return String(t || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function appliquer() {
+    var q = sansAccent(champRech ? champRech.value.trim() : "");
+    var visibles = 0;
+
+    fiches.forEach(function (f) {
+      var okCat = (catActive === "tous" || f.getAttribute("data-cat") === catActive);
+      var okQ = (q === "" || sansAccent(f.getAttribute("data-rech") || "").indexOf(q) !== -1);
+      var ok = okCat && okQ;
+      f.classList.toggle("masque", !ok);
+      if (ok) { visibles++; }
+    });
+
+    if (aucun) { aucun.hidden = (visibles !== 0); }
+    if (retourFiltre) {
+      retourFiltre.textContent = (catActive === "tous" && q === "")
+        ? ""
+        : visibles + (visibles > 1 ? " praticiens affichés." : " praticien affiché.");
+    }
+  }
+
+  filtres.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      catActive = btn.getAttribute("data-cat");
+      filtres.forEach(function (b) {
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+      appliquer();
+    });
+  });
+
+  if (champRech) { champRech.addEventListener("input", appliquer); }
+
+  var form = document.getElementById("form-contact");
+  var retour = document.getElementById("form-retour");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      var nom = form.nom.value.trim();
+      var mail = form.email.value.trim();
+      var msg = form.message.value.trim();
+
+      if (!nom || !mail || !msg) {
+        e.preventDefault();
+        retour.textContent = "Merci de renseigner votre nom, votre email et votre message.";
+        return;
+      }
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(mail)) {
+        e.preventDefault();
+        retour.textContent = "Merci de saisir une adresse email valide.";
+        return;
+      }
+
+      retour.textContent = "Envoi en cours...";
+    });
+  }
+
+  document.querySelectorAll("[data-todo]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+
+</body>
+</html>
